@@ -117,7 +117,7 @@ echo ===================================================
 echo;
 
 REM network printer location
-rundll32 printui.dll,PrintUIEntry /in /n "\\G34\Canon MF3010"
+rundll32 printui.dll,PrintUIEntry /in /n "\\PC\Canon MF3010"
 
 REM set printer as default
 set /p "default=Do you want to set this printer as default (Y/N)?"
@@ -125,7 +125,7 @@ if "%default%" EQU "%Yes%" goto YES
 if "%default%" EQU "%No%" goto NO
 
 :yes
-rundll32 printui.dll,PrintUIEntry /y /n "\\G34\Canon MF3010"
+rundll32 printui.dll,PrintUIEntry /y /n "\\PC\Canon MF3010"
 echo Printer has been set to default & pause & control printers & goto menu
 
 :no
